@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ps-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imc</title>
+    <script>
+        let alt = parseFloat(prompt("Digite sua altura: "));
+        let peso = parseFloat(prompt("Digite seu peso: "));
+        let imc = peso/alt**2
+        let resultado = ''
+
+
+        if(imc < 18.5){
+            resultado = 'baixo peso'
+        }else if(imc < 25){
+            resultado = 'dentro do peso normal'
+        }else if(imc < 30){
+            resultado = 'com sobrepeso'
+        }else{
+            resultado = 'com obesidade'
+        }
+        console.log('Olá, seu IMC é: ' + imc + '\nVocê está ' + resultado)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

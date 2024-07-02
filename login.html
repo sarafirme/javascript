@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+
+        let emailVerdade = "sara@gmail.com"
+        let senhaVerdade = "123456"
+
+
+        let email1 = prompt("Digite seu email:")
+        let senha1 = prompt("Digite sua senha:")
+
+        let emailCerto = email1 === emailVerdade;
+        let senhaCerta = senha1 === senhaVerdade;
+
+
+        if(emailCerto && senhaCerta){
+           alert("Usuario Logado!")
+        } else{
+            let email1 = prompt("Digite seu email:")
+            let senha1 = prompt("Digite sua senha:")
+            if(emailCerto && senhaCerta){   
+            alert("Usuario Logado!")
+            } else {
+                alert ("Usuario bloqueado!")
+            }
+        }
+    
+
+
+        // if(senhaCerta){
+        //     alert ("Login realizado com sucesso!!!")
+        // } else{
+        //     alert ("senha incorreta!")
+
+        // }
+       
+
+
+
+        // if(emailCerto && senhaCerta){
+        //     alert ("Login realizado com sucesso!!!")
+        // } else {
+        //     alert ("Email ou senha incorretos!")
+        // }
+       
+
+
+
+
+        // if(email1 === emailVerdade){
+        //     console.log ("Email correto!")
+        // }else{
+        //     console.log ("Email incorreto!")
+        // }
+
+        // if(senha1 === senhaVerdade){
+        //     console.log ("senha correta!")
+        // }else{
+        //     console.log ("senha incorreta")
+        // }
+
+
+
+
+
+        // let email = prompt("Digite seu email:")
+        // let senha = prompt("Digite sua senha:")
+
+        // if (email === emailVerdade){
+        //     Alert("Seja bem vindo(a!)")
+        //  }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
