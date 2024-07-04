@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        let emailF = ['sara@gmail', 'vanessa@gmail', 'guedes@gmail'];
+        let senhaF = ['123', '456', '789'];
+
+        let email = prompt('Digite seu email: ');
+        let senha = prompt('Digite sua senha: ');
+
+
+        for (let index = 0; index < emailF.length && index < senhaF.length ; index++ ){
+                if(email === emailF[index] && senha === senhaF[index]){
+                        alert('Login efetuado com sucesso!!!!')
+                    }else{
+                        let email = prompt('Digite seu email: ');
+                        let senha = prompt('Digite sua senha: ');
+                        if(email === emailF[index] && senha === senhaF[index]){   
+                            alert("Usuario Logado!")
+                        } else{
+                            alert ("Usuario não logado!") }
+                        }
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

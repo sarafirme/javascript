@@ -26,8 +26,13 @@
         //     console.log(frutas[index])
         // }
         //ordem exibiba do ultimo para o primeiro
-        for (let index = frutas.length-1; index >=0; index--){
+
+        for (let index = 0; index < frutas.length; index++){
             console.log(frutas[index])
+
+            if(frutas[index] == 'Abacaxi'){
+                alert('Fruta é abacaxi')
+            }
         }
             
 
