@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Porcentagem</title>
+    <script>
+        let lista = [50, 25, 120, 40, 80, 350, 550, 20, 110, 200]
+
+        function porcent(){
+            let maiores = 0
+
+            for(let i = 0; i < lista.length; i++){
+                if(lista[i] > 100){
+                    maiores++
+                }
+
+
+            }
+            resultado = maiores * 100 / lista.length
+            return resultado
+        }
+        alert(porcent())
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

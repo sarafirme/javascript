@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        // 1. Criar 4 funções, uma para cada operação (+, - ,*, /)
+        // 2. Cada função deve ter 2 parametrose retornar o resultado da operação
+        // Ex.: A função somar (2, 5) deve retornar o valor 7
+
+
+        let num1 = parseFloat(prompt('Digite o primeiro número: '))
+        let num2 = parseFloat(prompt('Digite o segundo número: '))
+        let op = prompt('Digite a operação: ')
+
+        if(op == '+'){
+            
+          alert('O valor da operação é: ' + soma(num1, num2))
+        }
+        if(op == '-'){
+            
+            alert('O valor da operação é: ' + sub(num1, num2))
+        }
+        if(op == '*'){
+            
+            alert('O valor da operação é: ' + mult(num1, num2))
+        }
+        if(op == '/'){
+            
+           alert('O valor da operação é: ' + div(num1, num2))
+        }
+
+
+        function soma(number1, number2){
+
+            let calc = number1 + number2
+            return calc
+        }
+
+   
+
+        function sub(number1, number2){
+
+            let calc = number1 - number2
+            return calc
+        }
+
+
+        function mult(number1, number2){
+
+            let calc = number1 * number2
+            return calc
+        }
+
+
+
+        function div(number1, number2){
+
+            let calc = number1 / number2
+            return calc
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
