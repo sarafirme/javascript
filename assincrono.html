@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assincrono</title>
+    <script>
+
+        console.log('Antes do set timout')
+
+        setTimeout(function(){
+            console.log('Dentro do set timout')
+            document.body.textContent = "Executou dentro de 5 segundos"
+        }, 1000);
+
+        console.log('Depois do set timeout')
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

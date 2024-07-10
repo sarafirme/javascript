@@ -282,7 +282,7 @@
         // function sul() {
         //     let brSul = 0
         //     for (let i = 0; i < uf.length; i++) {
-        //         if (uf[i].regiao.nome == "Sul"){
+        //         if (uf[i].regiao.nome === "Sul"){
         //             brSul++
         //         }
 
@@ -293,22 +293,19 @@
         // alert ('A região Sul do Brasil possui ' + sul() + ' Estados')
 
         // Atividade 2
-
-        
         function nordeste() {
-            let brNe = 0
+            let estadosNe = []
            for (let i = 0; i < uf.length; i++){
                 if (uf[i].regiao.id == 2){
-                    brNe = uf[i].nome
+                    estadosNe.push (uf[i].nome)
                 }
 
             }
             
-            
-            return brNe
+            return estadosNe
         }
 
-        alert (nordeste())
+        console.log (nordeste())
 
         // const user = ['fulano', 'da Silva', '35', '10247', '05269566332']
         // console.log(user[4])

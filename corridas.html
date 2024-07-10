@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida</title>
+    <script>
+        let carros = [
+            {carro: 'Uno com escada em cima', velocidade: 30, distancia: 0},
+            {carro: 'Relampago marquinhos ', velocidade: 5, distancia: 0},
+            {carro: 'Carro do ovo', velocidade: 2, distancia: 0},
+        ]
+        function start(){
+
+            let vencedor;
+            for(let i = 0; i < carros.length; i++){
+                let carro = carro[i];
+                carro.distancia += carro.velocidade;
+                console.log('carro' + carro.nome + 'andou' + carro.distancia)
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

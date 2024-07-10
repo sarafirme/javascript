@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <script>
+        //Retorne os dados:
+        //Masculino, Feminino, EUA, Registrados antes de 2010, idades maiores que 30
+
+        let people = [
+                {
+                    "gender": "female",
+                    "name": {
+                        "title": "Madame",
+                        "first": "Jana",
+                        "last": "Arnaud"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 6169,
+                            "name": "Rue Barrier"
+                        },
+                        "city": "Épalinges",
+                        "state": "Valais",
+                        "country": "Switzerland",
+                        "postcode": 9776,
+                        "coordinates": {
+                            "latitude": "-64.2508",
+                            "longitude": "29.3720"
+                        },
+                        "timezone": {
+                            "offset": "-4:00",
+                            "description": "Atlantic Time (Canada), Caracas, La Paz"
+                        }
+                    },
+                    "email": "jana.arnaud@example.com",
+                    "login": {
+                        "uuid": "7024964e-5f06-4f4d-96f9-e3e74dfcf972",
+                        "username": "organictiger270",
+                        "password": "vivid",
+                        "salt": "9az9s2YA",
+                        "md5": "d94f327880342cee297be4363d985e95",
+                        "sha1": "7ed1568bb7c4ec0dae0ebe4088611bd0a0837fde",
+                        "sha256": "95e80c2a62b63b12aae181131e5137bfdc6f0723ab8132f0c87aed14ce6c8cce"
+                    },
+                    "dob": {
+                        "date": "1996-12-06T14:21:41.322Z",
+                        "age": 27
+                    },
+                    "registered": {
+                        "date": "2011-07-14T02:49:47.475Z",
+                        "age": 12
+                    },
+                    "phone": "078 954 18 82",
+                    "cell": "078 332 21 86",
+                    "id": {
+                        "name": "AVS",
+                        "value": "756.1794.1521.74"
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/women/27.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/women/27.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/27.jpg"
+                    },
+                    "nat": "CH"
+                },
+                {
+                    "gender": "female",
+                    "name": {
+                        "title": "Mrs",
+                        "first": "Laura",
+                        "last": "Casares"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 5341,
+                            "name": "Cerrada Puebla"
+                        },
+                        "city": "Chamácuaro",
+                        "state": "San Luis Potosí",
+                        "country": "Mexico",
+                        "postcode": 74037,
+                        "coordinates": {
+                            "latitude": "60.7308",
+                            "longitude": "111.6442"
+                        },
+                        "timezone": {
+                            "offset": "+5:30",
+                            "description": "Bombay, Calcutta, Madras, New Delhi"
+                        }
+                    },
+                    "email": "laura.casares@example.com",
+                    "login": {
+                        "uuid": "4b46442d-a2ce-4728-82c7-a8835b852bb6",
+                        "username": "heavykoala407",
+                        "password": "popo",
+                        "salt": "zaa5AqMr",
+                        "md5": "5edf58aa6fc9530407c24479c823cc20",
+                        "sha1": "27ae06763e53eef7275e3a1a8c7799f4115d45d5",
+                        "sha256": "475d98ddd8593474ecad9af65a4944b5cd2c20a2895d4048fb807a1149eb2c48"
+                    },
+                    "dob": {
+                        "date": "1964-10-04T19:32:36.927Z",
+                        "age": 59
+                    },
+                    "registered": {
+                        "date": "2010-04-12T22:07:59.471Z",
+                        "age": 14
+                    },
+                    "phone": "(628) 965 4911",
+                    "cell": "(630) 594 2406",
+                    "id": {
+                        "name": "NSS",
+                        "value": "90 90 16 0251 3"
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/women/77.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/women/77.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/77.jpg"
+                    },
+                    "nat": "MX"
+                },
+                {
+                    "gender": "female",
+                    "name": {
+                        "title": "Ms",
+                        "first": "Milla",
+                        "last": "Lehtinen"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 1330,
+                            "name": "Tahmelantie"
+                        },
+                        "city": "Loimaa",
+                        "state": "Kymenlaakso",
+                        "country": "Finland",
+                        "postcode": 37991,
+                        "coordinates": {
+                            "latitude": "-87.6216",
+                            "longitude": "-178.5042"
+                        },
+                        "timezone": {
+                            "offset": "+8:00",
+                            "description": "Beijing, Perth, Singapore, Hong Kong"
+                        }
+                    },
+                    "email": "milla.lehtinen@example.com",
+                    "login": {
+                        "uuid": "e6494b77-556c-44cf-a87f-12509f6470af",
+                        "username": "whitemouse151",
+                        "password": "stuart",
+                        "salt": "4yTf4hHL",
+                        "md5": "228b82378424bfe21c5033cc5d1b648e",
+                        "sha1": "4d8c28197cca48daa66ba4ba5d5b189cfae4d1e2",
+                        "sha256": "ae0a928939dcbf12445380326c60332beffecae10aa383022c42d52d21eea56a"
+                    },
+                    "dob": {
+                        "date": "1983-03-15T10:08:04.779Z",
+                        "age": 41
+                    },
+                    "registered": {
+                        "date": "2018-09-13T09:57:15.582Z",
+                        "age": 5
+                    },
+                    "phone": "05-242-731",
+                    "cell": "043-256-52-17",
+                    "id": {
+                        "name": "HETU",
+                        "value": "NaNNA872undefined"
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/women/83.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/women/83.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/83.jpg"
+                    },
+                    "nat": "FI"
+                },
+                {
+                    "gender": "male",
+                    "name": {
+                        "title": "Mr",
+                        "first": "Hector",
+                        "last": "Neal"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 1669,
+                            "name": "Boghall Road"
+                        },
+                        "city": "Galway",
+                        "state": "Kildare",
+                        "country": "Ireland",
+                        "postcode": 72515,
+                        "coordinates": {
+                            "latitude": "-83.1957",
+                            "longitude": "177.7063"
+                        },
+                        "timezone": {
+                            "offset": "+11:00",
+                            "description": "Magadan, Solomon Islands, New Caledonia"
+                        }
+                    },
+                    "email": "hector.neal@example.com",
+                    "login": {
+                        "uuid": "01914925-5e97-4cd2-a734-e6b1e189dfa0",
+                        "username": "tinybird969",
+                        "password": "hedgehog",
+                        "salt": "w5XWdjrL",
+                        "md5": "6e99c34168a1f2ac4606a47a798d6fac",
+                        "sha1": "b9dccba23c71485a82aef082c5395fa7eeef2e24",
+                        "sha256": "fdb8f13590a8e81726d9ad872f82a894b6f15176db8c570b26f8d37a2ef04d70"
+                    },
+                    "dob": {
+                        "date": "1946-07-23T07:00:40.175Z",
+                        "age": 77
+                    },
+                    "registered": {
+                        "date": "2017-08-16T17:09:47.541Z",
+                        "age": 6
+                    },
+                    "phone": "061-735-8516",
+                    "cell": "081-127-5286",
+                    "id": {
+                        "name": "PPS",
+                        "value": "7998173T"
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/men/48.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/men/48.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/48.jpg"
+                    },
+                    "nat": "IE"
+                },
+                {
+                    "gender": "male",
+                    "name": {
+                        "title": "Mr",
+                        "first": "Carlos",
+                        "last": "Adams"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 2463,
+                            "name": "Highfield Road"
+                        },
+                        "city": "Bath",
+                        "state": "Durham",
+                        "country": "United Kingdom",
+                        "postcode": "D0 9SQ",
+                        "coordinates": {
+                            "latitude": "32.2624",
+                            "longitude": "114.1180"
+                        },
+                        "timezone": {
+                            "offset": "-4:00",
+                            "description": "Atlantic Time (Canada), Caracas, La Paz"
+                        }
+                    },
+                    "email": "carlos.adams@example.com",
+                    "login": {
+                        "uuid": "d7374b52-6489-4832-bcb6-876af2066b5e",
+                        "username": "redladybug119",
+                        "password": "pasword",
+                        "salt": "MQlVfWla",
+                        "md5": "80a66440d7c8327da8382a1676ca276d",
+                        "sha1": "23e553d1914e34c636022b5122e2b746e7893ce2",
+                        "sha256": "e4c670b1b0e0f1d984066db49008a37b9dfab09842a3083afe4f8745130f313a"
+                    },
+                    "dob": {
+                        "date": "1994-05-15T03:56:21.855Z",
+                        "age": 30
+                    },
+                    "registered": {
+                        "date": "2014-08-07T11:24:01.982Z",
+                        "age": 9
+                    },
+                    "phone": "0101 179 3837",
+                    "cell": "07765 755996",
+                    "id": {
+                        "name": "NINO",
+                        "value": "LG 02 81 90 I"
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/men/67.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/men/67.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/67.jpg"
+                    },
+                    "nat": "GB"
+                },
+                {
+                    "gender": "female",
+                    "name": {
+                        "title": "Mrs",
+                        "first": "Josephine",
+                        "last": "Knight"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 8624,
+                            "name": "Oak Lawn Ave"
+                        },
+                        "city": "Westminster",
+                        "state": "Nevada",
+                        "country": "United States",
+                        "postcode": 15844,
+                        "coordinates": {
+                            "latitude": "53.8587",
+                            "longitude": "101.7122"
+                        },
+                        "timezone": {
+                            "offset": "-8:00",
+                            "description": "Pacific Time (US & Canada)"
+                        }
+                    },
+                    "email": "josephine.knight@example.com",
+                    "login": {
+                        "uuid": "02496e1f-0c7c-4c68-982b-24c84dabfed1",
+                        "username": "sadcat684",
+                        "password": "gabriela",
+                        "salt": "U6pKP41c",
+                        "md5": "cccfb40804c32684dedac51d9fdb1397",
+                        "sha1": "c6fcdc97b6be73a4fcb89270a5c92622cf27c01d",
+                        "sha256": "8eab5b6d83a166d926de28ae05f5e00a46c6fd113327aa0a9edb2815396e7db3"
+                    },
+                    "dob": {
+                        "date": "1964-10-24T23:01:17.538Z",
+                        "age": 59
+                    },
+                    "registered": {
+                        "date": "2007-10-17T12:52:25.540Z",
+                        "age": 16
+                    },
+                    "phone": "(383) 557-9087",
+                    "cell": "(460) 893-6965",
+                    "id": {
+                        "name": "SSN",
+                        "value": "248-54-1091"
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/women/59.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/women/59.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/59.jpg"
+                    },
+                    "nat": "US"
+                },
+                {
+                    "gender": "female",
+                    "name": {
+                        "title": "Miss",
+                        "first": "Kayla",
+                        "last": "Morris"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 4021,
+                            "name": "Target Road"
+                        },
+                        "city": "Wellington",
+                        "state": "Taranaki",
+                        "country": "New Zealand",
+                        "postcode": 64963,
+                        "coordinates": {
+                            "latitude": "52.0414",
+                            "longitude": "-68.9041"
+                        },
+                        "timezone": {
+                            "offset": "+5:45",
+                            "description": "Kathmandu"
+                        }
+                    },
+                    "email": "kayla.morris@example.com",
+                    "login": {
+                        "uuid": "71204340-57ab-42c1-820a-a70e9a0def06",
+                        "username": "purpletiger429",
+                        "password": "milfnew",
+                        "salt": "BIIoSCb9",
+                        "md5": "7911b75d5787d8b33246f24c26a50a98",
+                        "sha1": "6b7c31093dcc381993ea7b27190dd432f9c154a9",
+                        "sha256": "4a878ed805ea58ebb9406bf4f1e0b3965e0d50e97d7ce1acf48fc17ef1994ed4"
+                    },
+                    "dob": {
+                        "date": "1950-06-14T13:39:33.782Z",
+                        "age": 74
+                    },
+                    "registered": {
+                        "date": "2017-11-03T00:06:39.465Z",
+                        "age": 6
+                    },
+                    "phone": "(786)-273-2512",
+                    "cell": "(757)-674-4041",
+                    "id": {
+                        "name": "",
+                        "value": null
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/women/48.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/women/48.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/48.jpg"
+                    },
+                    "nat": "NZ"
+                },
+                {
+                    "gender": "female",
+                    "name": {
+                        "title": "Miss",
+                        "first": "Prakruthi",
+                        "last": "Dawangave"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 816,
+                            "name": "Mall Rd"
+                        },
+                        "city": "Dehradun",
+                        "state": "Mizoram",
+                        "country": "India",
+                        "postcode": 80818,
+                        "coordinates": {
+                            "latitude": "70.4840",
+                            "longitude": "34.2194"
+                        },
+                        "timezone": {
+                            "offset": "0:00",
+                            "description": "Western Europe Time, London, Lisbon, Casablanca"
+                        }
+                    },
+                    "email": "prakruthi.dawangave@example.com",
+                    "login": {
+                        "uuid": "9369c39c-b0cc-4107-b8e2-d11ce5e4c5a0",
+                        "username": "bluelion987",
+                        "password": "dylan",
+                        "salt": "GAs8cVio",
+                        "md5": "d0e5668da05cc456680e024f1397b280",
+                        "sha1": "266849440ee954c4053f0750b5df546ab2bafc1b",
+                        "sha256": "3752be2ab347a0b33c181611daf7380655798ae73ff9d3626b035b619768f2c8"
+                    },
+                    "dob": {
+                        "date": "1948-11-28T03:08:23.281Z",
+                        "age": 75
+                    },
+                    "registered": {
+                        "date": "2015-09-02T21:38:38.805Z",
+                        "age": 8
+                    },
+                    "phone": "7009385267",
+                    "cell": "8475392560",
+                    "id": {
+                        "name": "UIDAI",
+                        "value": "098038342083"
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/women/8.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/women/8.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/8.jpg"
+                    },
+                    "nat": "IN"
+                },
+                {
+                    "gender": "female",
+                    "name": {
+                        "title": "Mrs",
+                        "first": "Gabrielle",
+                        "last": "Aardal"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 201,
+                            "name": "Breiens vei"
+                        },
+                        "city": "Hamre",
+                        "state": "Bergen",
+                        "country": "Norway",
+                        "postcode": "6657",
+                        "coordinates": {
+                            "latitude": "-52.0387",
+                            "longitude": "83.1496"
+                        },
+                        "timezone": {
+                            "offset": "-5:00",
+                            "description": "Eastern Time (US & Canada), Bogota, Lima"
+                        }
+                    },
+                    "email": "gabrielle.aardal@example.com",
+                    "login": {
+                        "uuid": "38629a65-80a9-450e-827f-4463e458a2fc",
+                        "username": "sadfish101",
+                        "password": "spirit",
+                        "salt": "k11LhVNU",
+                        "md5": "2b954086ec2c8389a5ec5027fa754c90",
+                        "sha1": "fd302704464abcde853326058d73530c2d67584d",
+                        "sha256": "c890ddf70a54321c07a11f2b3246d5bfa329196beddd686b089948355ae6daae"
+                    },
+                    "dob": {
+                        "date": "1975-10-22T05:53:46.600Z",
+                        "age": 48
+                    },
+                    "registered": {
+                        "date": "2015-09-08T08:16:46.557Z",
+                        "age": 8
+                    },
+                    "phone": "58011932",
+                    "cell": "91335538",
+                    "id": {
+                        "name": "FN",
+                        "value": "22107507039"
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/women/31.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/women/31.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/31.jpg"
+                    },
+                    "nat": "NO"
+                },
+                {
+                    "gender": "female",
+                    "name": {
+                        "title": "Mrs",
+                        "first": "Yasemin",
+                        "last": "Tunçeri"
+                    },
+                    "location": {
+                        "street": {
+                            "number": 7566,
+                            "name": "Kushimoto Sk"
+                        },
+                        "city": "Kütahya",
+                        "state": "Şırnak",
+                        "country": "Turkey",
+                        "postcode": 17678,
+                        "coordinates": {
+                            "latitude": "52.4520",
+                            "longitude": "123.5711"
+                        },
+                        "timezone": {
+                            "offset": "+8:00",
+                            "description": "Beijing, Perth, Singapore, Hong Kong"
+                        }
+                    },
+                    "email": "yasemin.tunceri@example.com",
+                    "login": {
+                        "uuid": "deebd9fb-2905-4f26-abd9-a75e34babf0b",
+                        "username": "sadsnake988",
+                        "password": "a1b2c3d4",
+                        "salt": "d93VYkhw",
+                        "md5": "1188508f63abf5435073acffc40a8caa",
+                        "sha1": "46e39a609f325995079061931d2e60c4b7920e92",
+                        "sha256": "b12bc40de8507ce147ee5b7426de1d2a0656cbaefc60484b1326e0504a6521e6"
+                    },
+                    "dob": {
+                        "date": "1975-08-13T13:17:14.588Z",
+                        "age": 48
+                    },
+                    "registered": {
+                        "date": "2007-06-18T15:23:22.930Z",
+                        "age": 17
+                    },
+                    "phone": "(836)-692-3654",
+                    "cell": "(963)-713-4192",
+                    "id": {
+                        "name": "",
+                        "value": null
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/women/82.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/women/82.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/82.jpg"
+                    },
+                    "nat": "TR"
+                }
+            ]
+
+
+        function masc(){
+            let genderM = 0
+            for(let i = 0; i < people.length; i++){
+                if(people[i].gender === 'male'){
+                    genderM++
+                }
+            }
+            return genderM
+        }
+        console.log (masc())
+
+        // function fem(){
+
+        // }
+        // function eua(){
+
+        // }
+        // function register(){
+
+        // }
+        // function age(){
+
+        // }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
