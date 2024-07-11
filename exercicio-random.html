@@ -573,6 +573,8 @@
             ]
 
 
+            //MODO COM FUNCTION
+
         function masc(){
             let genderM = 0
             for(let i = 0; i < people.length; i++){
@@ -582,22 +584,72 @@
             }
             return genderM
         }
-        console.log (masc())
 
-        // function fem(){
+        function fem(){
+            let genderF = 0
+            for(let i = 0; i < people.length; i++){
+                if(people[i].gender === 'female'){
+                    genderF++
+                }
+            }
+            return genderF
+        }
 
-        // }
-        // function eua(){
+        
+        function eua(){
+            let us = 0
+            for(let i = 0; i < people.length; i++){
+                if(people[i].location.country === 'United States'){
+                    us++
+                }
+            }
+            return us
+        }
+    
+        // LINK SUBSTRING: https://www.w3schools.com/jsref/jsref_substring.asp
 
-        // }
-        // function register(){
+        function register(){
+            let registrados = 0
+            for(let i = 0; i < people.length; i++){
+                let string = people[i].registered.date
+                let subString = string.substring(0, 4)
 
-        // }
-        // function age(){
+                if(subString < 2010){
+                    registrados++
+                }
+            }
+            return registrados
+        }
 
-        // }
+        function age(){
+            let idade = 0
+            for(let i = 0; i < people.length; i++){
+                if(people[i].dob.age > 30){
+                    idade++
+                }
+            }
+            return idade
+        }
+        // console.log ('A quantidade de pessoas so sexo masculino é de: ' + masc() + ', a quabtidade de pessoas do sexo feminino é: ' +  fem() + ', a quantidade de pessoas residentes do EUA é: ' + eua() + ', pessoas maiores de 30 anos: ' +  age())
+        console.log (register())  
+        
 
 
+            //MODO COM FOR E IF
+        //     let genderM = 0
+        //     let genderF = 0
+        //     let us = 0
+
+        // for(let i = 0; i < people.length; i++){
+            
+        //     if(people[i].gender === 'male'){
+        //             genderM++
+        //     }
+        //     if(people[i].gender === 'female'){
+        //         genderF++
+        //     }
+        //     }     
+        //     console.log(genderM)
     </script>
 </head>
 
